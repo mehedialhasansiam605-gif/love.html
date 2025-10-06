@@ -1,2 +1,64 @@
-# love.html
-In this respiratory I will propose samiya
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ভালোবাসার চমক 💖</title>
+<style>
+  body {background:#ffe6ec;font-family:'Noto Sans Bengali',sans-serif;text-align:center;padding-top:100px;}
+  h1,h2,h3 {color:#ff1a75;}
+  #message,#question,#buttons {display:none;margin-top:20px;}
+  button {padding:12px 24px;margin:10px;border:none;border-radius:10px;font-size:1.1em;cursor:pointer;transition:0.3s;}
+  .yes{background:linear-gradient(90deg,#6ee7b7,#22c1c3);color:#013;}
+  .no{background:#f3f4f6;border:1px solid #e5e7eb;color:#333;}
+  a.messenger {display:none;margin-top:15px;padding:10px 16px;background:#0084ff;color:#fff;border-radius:10px;text-decoration:none;}
+  iframe {margin-top:20px;border:none;border-radius:12px;}
+</style>
+</head>
+<body>
+
+<h1 id="surprise">🎁 চমক দেখতে এখানে ক্লিক করো 💖</h1>
+
+<h2 id="message">আমি তোমাকে ভালোবাসি 💌</h2>
+<h3 id="question">তুমিও কি আমায় চাও? ❤️</h3>
+
+<div id="buttons">
+  <button class="yes" id="yesBtn">হ্যাঁ 💕</button>
+  <button class="no" id="noBtn">না 😢</button>
+</div>
+
+<a href="https://m.me/mehedi661?text=%E0%A6%86%E0%A6%AE%E0%A6%BF%E0%A6%93%20%E0%A6%A4%E0%A7%8B%E0%A6%AE%E0%A6%BE%E0%A6%95%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%20%E2%9D%A4%EF%B8%8F" target="_blank" class="messenger" id="messengerBtn">মেহেদিকে জানাও 💬</a>
+
+<iframe id="ytplayer" width="0" height="0" src="" allow="autoplay" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+
+<script>
+const surprise = document.getElementById('surprise');
+const message = document.getElementById('message');
+const question = document.getElementById('question');
+const buttons = document.getElementById('buttons');
+const yesBtn = document.getElementById('yesBtn');
+const noBtn = document.getElementById('noBtn');
+const messengerBtn = document.getElementById('messengerBtn');
+const ytplayer = document.getElementById('ytplayer');
+
+surprise.addEventListener('click',()=>{
+  surprise.style.display='none';
+  ytplayer.width='560';
+  ytplayer.height='315';
+  ytplayer.src='https://www.youtube.com/embed/3A6Xp8f49Bg?autoplay=1&rel=0&modestbranding=1';
+  message.style.display='block';
+  setTimeout(()=>{question.style.display='block'; buttons.style.display='block';},1000);
+});
+
+yesBtn.addEventListener('click',()=>{
+  messengerBtn.style.display='inline-block';
+});
+
+noBtn.addEventListener('click',()=>{
+  document.body.innerHTML="<h1 style='color:#555;'>দুঃখিত 😔</h1>";
+});
+</script>
+
+</body>
+</html>
+
